@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Планировщик</title>
+</head>
+<body class="page__body">
+    <main class="main">
+        <div class="form__wrapper">
+            <div class="form__wrapper-rules">
+                <h2 class="title">
+                    // Инструкция
+                </h2>
+                
+                <p class="text">
+                    <b>
+                        1. 
+                    </b>
+                    Это приложения для хранения списка задач
+                </p>
+
+                <p class="text">
+                    <b>
+                        2. 
+                    </b>
+                    Для того чтобы добавить задачу:
+                </p>
+
+                <p class="text">
+                    <b>
+                        2.1 
+                    </b>
+                    Заполните все поля. Они обязательные*
+                    <br>
+                    <b>
+                        Заголовок: 
+                    </b>
+                    длина от 0 до 20 символов (Кириллица).
+
+                    <br>
+                    <b>
+                        Текст: 
+                    </b>
+                    длина от 0 до 100 символов (Кириллица).
+                </p>
+
+                <p class="text">
+                    <b>
+                        2.2 
+                    </b>
+                    Нажмите кнопку отправить
+                </p>
+
+                <p class="text">
+                    <b>
+                        2.3 
+                    </b>
+                    Если вы указали дату, которая уже есть в списке, то задача добавится в эту группу. 
+                    <br>
+                    В другом случае появится новая группа задач 
+                </p>
+            </div>
+
+
+            <div class="form__wrapper-setdata">
+                <h1 class="form__title">
+                    Планировщик задач
+                </h1>
+                
+                <form class="form">
+                    <label for="input__data">Дата:</label>
+                    <input type="date" class="input input__data" id="input__data" required>
+                    
+                    <label for="input__data">Заголовок:</label>
+                    <input type="text" class="input input__title" pattern="[А-Яа-яЁё]{0,20}" required>
+                    
+                    <label for="input__data">Текст:</label>
+                    <input type="text" class="input input__description" pattern="[А-Яа-яЁё -]{0,100}" required>
+                    
+                    <button class="button" type="submit">Добавить</button>
+                </form>
+            </div>
+        </div>
+
+
+        <ul class="task__wrapper">
+            <li class="task__date">
+                <h2 class="output__date">07.03.2023</h2>
+
+                <ul class="task__list">
+                    <!-- 1 -->
+                    <li class="task__item">
+                        <h3 class="task__item-title">
+                            Прогулка
+                        </h3>
+                        
+                        <p class="task__item-text">
+                            Отправляйтесь на конную прогулку по лесу.
+                        </p>
+                    </li>
+                    
+                    <!-- 2 -->
+                    <li class="task__item">
+                        <h3 class="task__item-title">
+                            Устроить фотосессию
+                        </h3>
+                        
+                        <p class="task__item-text">
+                            Дни пролетают незаметно, и вы даже не можете вспомнить, чем занимались в прошлые выходные? Попробуйте запечатлевать каждый приятный момент своей жизни на фото.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="task__date">
+                <h2 class="output__date">08.03.2023</h2>
+
+                <ul class="task__list">
+                    <!-- 1 -->
+                    <li class="task__item">
+                        <h3 class="task__item-title">
+                            Приготовить нечто особенное
+                        </h3>
+                        
+                        <p class="task__item-text">
+                            Выберите что-то сложное и красивое, закупите в магазине всё необходимое и начинайте. Попытайтесь украсить блюдо, как в ресторане, зажгите свечи, которые пылятся в шкафу с прошлого Нового года, смешайте необычный коктейль. Выходные — это праздник, который всегда с тобой.
+                        </p>
+                    </li>
+                    
+                    <!-- 2 -->
+                    <li class="task__item">
+                        <h3 class="task__item-title">
+                            Почитать
+                        </h3>
+                        
+                        <p class="task__item-text">
+                            Уединитесь в тишине с хорошей книгой. А если тратиться на новые книги не хочется, попробуйте провести рейд по ближайшим полкам для буккроссинга. Наверняка там найдётся что-то по душе. Только не забудьте тоже что-то оставить на полке.
+                        </p>
+                    </li>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

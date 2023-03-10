@@ -1,0 +1,131 @@
+.page__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-size: 14px;
+    color: black;
+    background-color: #f2fbff;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    min-height: 700px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    padding: 10px 0;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.form__wrapper-setdata {
+    padding: 10px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    background-color: #8482ff;
+}
+
+.form__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    font-size: 15px;
+}
+
+.input {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    min-height: 30px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+input:invalid {
+    outline: 2px solid #f24822;
+}
+
+.button {
+    min-height: 40px;
+    background-color: #F7931D;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+}
+
+
+/* Список задач */
+.task__wrapper {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
+    gap: 10px;
+    padding: 0;
+    width: 60%;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    list-style-type: none;
+}
+
+.task__list {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.task__item {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task__item:last-child {
+    margin-bottom: 0;
+}
+
+.task__item-title {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.task__item-text {
+    margin: 0;
+}
