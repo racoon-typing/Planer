@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
+    height: 100%;
     min-height: 700px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -91,7 +92,7 @@ input:invalid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content;
-    gap: 10px;
+    gap: 20px;
     padding: 0;
     width: 60%;
     box-sizing: border-box;
@@ -111,14 +112,22 @@ input:invalid {
 }
 
 .task__item {
+    position: relative;
     background-color: #fff;
     border: 1px solid black;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .task__item:last-child {
     margin-bottom: 0;
+}
+
+.task__item--current {
+    box-shadow: 5px 5px 3px 3px rgba(0,0,0,0.25);
+    transform: translate(-5px, -5px);
+    border: 1px solid red;
+    z-index: 2;
 }
 
 .task__item-title {
@@ -128,4 +137,26 @@ input:invalid {
 
 .task__item-text {
     margin: 0;
+}
+
+/* Кнопка удаления */
+.button__del {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    top: 0;
+    right: -45px;
+    z-index: 2;
+    border: none;
+}
+
+.button__del::before {
+    position: absolute;
+    content: 'X';
+    font-size: 32px;
+    line-height: 32px;
+    top: 4px;
+    left: 9px;
+    color: #fff;
 }

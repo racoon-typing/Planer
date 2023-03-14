@@ -19,7 +19,6 @@ formNode.addEventListener('submit', (evt) => {
     console.log(dateArr);
 
 
-
     // Получает значение из инпута
     const dataValue = inputData.value;
     const dataArr = dataValue.split('-')
@@ -99,3 +98,39 @@ function createEl() {
 
     return itemNode;
 }
+
+
+// Удалить задачу
+const taskWrapper = document.querySelector('.task__wrapper');
+
+// Слушатель на расписании
+taskWrapper.addEventListener('click', (e) => {
+    // Очищает выбранные задачи
+    const activeItem = document.querySelectorAll('.task__item--current');
+    activeItem.forEach(el => {
+        console.log(el);
+        el.classList.remove('task__item--current');
+        el.querySelector('.button__del').remove();
+    });
+
+    // Нажатый элемент
+    const targetEl = e.target;
+
+    // Добавляет клас для выбранной задачи
+    const nearestItem = targetEl.closest('.task__item');
+    nearestItem.classList.toggle('task__item--current');
+
+    // // Создает кнопку DEL
+    const buttonDel = document.createElement('button');
+    buttonDel.classList.add('button__del');
+
+    nearestItem.append(buttonDel);
+
+    // Удаляет задачу
+    buttonDel.addEventListener('click', (evt) => {
+        evt.stopPropagation();
+        nearestItem.remove();
+    });
+});
+
+
