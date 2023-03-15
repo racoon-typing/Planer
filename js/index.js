@@ -78,7 +78,6 @@ formNode.addEventListener('submit', (evt) => {
         // Добавляет задачу
         outputList.append(itemNode);
     }
-
 });
 
 
@@ -130,11 +129,26 @@ taskWrapper.addEventListener('click', (e) => {
     buttonDel.addEventListener('click', (evt) => {
         evt.stopPropagation();
         nearestItem.remove();
+
+        // Находит группы задач на день
+        const outputList = document.querySelectorAll('.task__list');
+
+        // Обходит массив групп
+        outputList.forEach((el, id) => {
+            // Находит все задачи на день
+            const item = outputList[id].querySelectorAll('.task__item').length;
+
+            // Если задач на день нет, то удаляет группу
+            if (item === 0) {
+                const taskWrapper = el.closest('.task__date');
+                taskWrapper.remove();
+            }
+        })
     });
 });
 
 
-
+// Кнопка меню
 const buttonBurger = document.querySelector('.button__burger');
 
 buttonBurger.addEventListener('click', () => {
@@ -143,7 +157,6 @@ buttonBurger.addEventListener('click', () => {
     const isOpen = taskWrapper.classList.contains('task__wrapper--open');
 
     if (isOpen) {
-        console.log('Я')
         buttonBurger.style.zIndex = '2';
     } else {        
         buttonBurger.style.zIndex = '0';
