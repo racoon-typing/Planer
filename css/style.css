@@ -257,16 +257,4 @@ input:invalid {
     .button__burger {
         display: none;
     }
-
-    /* Кнопка удаления */
-    .button__del {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        background-color: red;
-        top: 0;
-        right: -45px;
-        z-index: 2;
-        border: none;
-    }
 }
