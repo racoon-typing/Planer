@@ -134,3 +134,18 @@ taskWrapper.addEventListener('click', (e) => {
 });
 
 
+
+const buttonBurger = document.querySelector('.button__burger');
+
+buttonBurger.addEventListener('click', () => {
+    taskWrapper.classList.toggle('task__wrapper--open');
+
+    const isOpen = taskWrapper.classList.contains('task__wrapper--open');
+
+    if (isOpen) {
+        console.log('Я')
+        buttonBurger.style.zIndex = '2';
+    } else {        
+        buttonBurger.style.zIndex = '0';
+    }
+});

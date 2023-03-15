@@ -85,7 +85,6 @@ input:invalid {
     font-size: 15px;
 }
 
-
 /* Список задач */
 .task__wrapper {
     position: absolute;
@@ -100,9 +99,14 @@ input:invalid {
     background-color: blanchedalmond;
     padding: 10px;
     padding-top: 50px;
+    border-radius: 20px;
     box-sizing: border-box;
     overflow-y: auto;
     list-style-type: none;
+}
+
+.task__wrapper--open {
+    display: block;
 }
 
 .task__list {
@@ -164,6 +168,7 @@ input:invalid {
     color: #fff;
 }
 
+/* Кнопка меню */
 .button__burger {
     position: absolute;
     top: 25px;
@@ -234,18 +239,13 @@ input:invalid {
 
     .task__wrapper {
         position: relative;
-        margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: min-content;
         gap: 20px;
         width: 60%;
         height: auto;
-        background-color: blanchedalmond;
         padding: 10px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        list-style-type: none;
     }
 
     .task__item-title {
@@ -253,6 +253,7 @@ input:invalid {
         margin-bottom: 10px;
     }
 
+    /* Кнопка меню */
     .button__burger {
         display: none;
     }
