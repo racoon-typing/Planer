@@ -16,11 +16,10 @@ formNode.addEventListener('submit', (evt) => {
         const outputDate = el.querySelector('.output__date').textContent;
         dateArr.push(outputDate);
     });
-    console.log(dateArr);
-
 
     // Получает значение из инпута
     const dataValue = inputData.value;
+    console.log(dataValue);
     const dataArr = dataValue.split('-')
 
     // Приводит дату в формат: 00.00.0000
@@ -29,18 +28,11 @@ formNode.addEventListener('submit', (evt) => {
     for (let i = dataArr.length - 1; i >= 0; i--) {
         formatDataArr.push(dataArr[i])
     }
-
     formatDataStr += formatDataArr.join('.');
-
-    console.log(formatDataStr);
-
 
     // Проверяет есть ли эта дата в списке задач
     const isSimilar = dateArr.includes(formatDataStr); // Возвращает true, если есть совпадение
     const getIndex = dateArr.indexOf(formatDataStr); // Возвращает index совпадащего элемента
-
-    console.log(isSimilar);
-    console.log(getIndex);
 
     if (isSimilar) {
         // Сохраняет в переменную: создание 1 задачи
@@ -58,7 +50,6 @@ formNode.addEventListener('submit', (evt) => {
 
         // Добавляет дату
         taskGroup.querySelector('.output__date').textContent = `${formatDataStr}`;
-
 
         taskWrapper.append(taskGroup);
 
